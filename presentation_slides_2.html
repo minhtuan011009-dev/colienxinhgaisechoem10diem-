@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nghị Luận Xã Hội: Quyền Được Thử Và Sai Lầm Của Giới Trẻ | Fullscreen Edition</title>
+  <!-- CDN Tailwind CSS chuẩn quốc tế -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .font-heading {
+      font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    }
+    .slide-enter {
+      animation: slideFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes slideFadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Thanh cuộn tinh tế bên trong slide */
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(220, 38, 38, 0.4);
+      border-radius: 4px;
+    }
+    /* Họa tiết lưới tọa độ */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0F17] text-slate-100 h-screen w-screen flex flex-col justify-between selection:bg-red-600 selection:text-white overflow-hidden m-0 p-0">
+
+  <!-- TOP HEADER / PROJECTOR CONTROL BAR -->
+  <header class="w-full bg-[#111827]/95 backdrop-blur border-b border-slate-800 px-4 sm:px-6 py-2 flex items-center justify-between z-30 shrink-0">
+    <div class="flex items-center gap-3">
+      <span class="px-2.5 py-1 bg-red-600/20 text-red-400 border border-red-500/30 rounded text-xs font-bold tracking-wider uppercase font-heading">
+        NGỮ VĂN 12 • THUYẾT TRÌNH CÁ NHÂN
+      </span>
+      <span class="text-sm font-semibold text-slate-200 hidden md:inline">Quyền Được Thử Và Sai Lầm Của Giới Trẻ</span>
+    </div>
+    
+    <div class="flex items-center gap-3 text-xs">
+      <span class="text-slate-400 font-mono text-xs sm:text-sm">Slide <span id="current-index" class="text-white font-bold text-base">1</span> / 9</span>
+      <div class="flex items-center gap-1 bg-slate-800 p-1 rounded-lg border border-slate-700">
+        <button id="prev-btn" onclick="prevSlide()" class="px-2.5 sm:px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-slate-200 transition font-medium disabled:opacity-30 disabled:cursor-not-allowed">← Trước</button>
+        <button id="next-btn" onclick="nextSlide()" class="px-3 sm:px-3.5 py-1 bg-red-600 hover:bg-red-500 rounded text-white font-bold transition disabled:opacity-30 disabled:cursor-not-allowed">Sau →</button>
+      </div>
+      <button onclick="toggleNotes()" id="notes-btn" class="px-2.5 sm:px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded text-slate-200 transition text-xs font-semibold flex items-center gap-1.5">
+        <span>🎙️</span> <span class="hidden sm:inline">Kịch bản diễn giải</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CANVAS (Bung rộng 98% diện tích màn hình, loại bỏ viền đen thừa) -->
+  <main class="flex-1 flex flex-col p-1 sm:p-2 w-full h-[calc(100vh-48px)] overflow-hidden">
+    <div class="w-full h-full flex-1 relative shadow-2xl rounded-none sm:rounded-xl overflow-hidden border border-slate-700/80 transition-all flex flex-col bg-[#111827]" id="slide-container">
+      
+      <!-- ================= SLIDE 1: TRANG BÌA ================= -->
+      <div id="slide-1" class="slide-item absolute inset-0 flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-[#111827] bg-grid-pattern text-white overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-800/80 pb-3 sm:pb-4 shrink-0">
+          <div class="flex items-center gap-2.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+            <span class="text-xs sm:text-sm tracking-widest uppercase font-heading text-red-500 font-bold">CHUYÊN ĐỀ NGHỊ LUẬN XÃ HỘI</span>
+          </div>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">BÁO CÁO THUYẾT TRÌNH NGỮ VĂN 12</span>
+        </div>
+
+        <div class="my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-4 w-full">
+          <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-950/80 border border-red-700/80 text-red-400 text-xs sm:text-sm font-bold uppercase tracking-wider">
+              <span>⚖️</span> Tư duy phản biện trước ngưỡng cửa cuộc đời
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.18] font-heading">
+              QUYỀN ĐƯỢC THỬ VÀ SAI LẦM<br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">CỦA GIỚI TRẺ</span>
+            </h1>
+
+            <p class="text-base sm:text-xl lg:text-2xl text-slate-300 font-normal leading-relaxed">
+              Góc nhìn phản biện trước ngưỡng cửa trưởng thành: Bản lĩnh dấn thân hay sự ngụy biện cho cẩu thả?
+            </p>
+          </div>
+
+          <!-- Thẻ bên phải hiển thị 3 trụ cột -->
+          <div class="lg:col-span-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 shadow-2xl backdrop-blur space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <span class="text-xs font-bold uppercase tracking-widest text-red-500 font-heading">3 TRỤ CỘT BÀI NÓI</span>
+              <span class="text-xs text-slate-400 font-mono">CHUYÊN ĐỀ 12</span>
+            </div>
+            <div class="space-y-3.5 text-sm sm:text-base">
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-red-500/50 transition">
+                <span class="w-8 h-8 rounded-lg bg-red-600/20 text-red-400 font-bold flex items-center justify-center font-heading text-sm">01</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Lập luận phản biện</h4>
+                  <p class="text-xs text-slate-400">Chi phí tất yếu của thanh xuân</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-red-500/50 transition">
+                <span class="w-8 h-8 rounded-lg bg-red-600/20 text-red-400 font-bold flex items-center justify-center font-heading text-sm">02</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Dẫn chứng thực tế</h4>
+                  <p class="text-xs text-slate-400">Elon Musk & 3 lần tên lửa nổ tung</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-red-500/50 transition">
+                <span class="w-8 h-8 rounded-lg bg-red-600/20 text-red-400 font-bold flex items-center justify-center font-heading text-sm">03</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Tương tác trực tiếp</h4>
+                  <p class="text-xs text-slate-400">Khảo sát biểu quyết & Đồng hồ 30s</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 sm:pt-4 border-t border-slate-800/80 text-xs sm:text-sm text-slate-400 shrink-0">
+          <span class="font-medium text-slate-300">Bài thuyết trình cá nhân • Môn Ngữ Văn 12</span>
+          <span class="text-slate-500">Dùng phím mũi tên [ ← ] [ → ] để chuyển slide</span>
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 2: TƯƠNG TÁC MỞ ĐẦU ================= -->
+      <div id="slide-2" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">KHỞI ĐỘNG • TƯƠNG TÁC ĐẶT VẤN ĐỀ</span>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-500 font-medium hidden sm:inline">Khảo sát bình chọn trực tiếp</span>
+            <button onclick="resetVote(event)" class="px-2.5 py-1 rounded bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold transition" title="Đặt lại khảo sát về 0">↺ Đặt lại</button>
+          </div>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-5 w-full py-2">
+          <div class="text-center space-y-1">
+            <h2 class="text-2xl sm:text-4xl lg:text-[42px] font-extrabold text-[#111827] font-heading">
+              Trước ngưỡng cửa tuổi 18, bạn chọn bước qua <span class="text-red-600 underline decoration-4 underline-offset-4">cánh cửa</span> nào?
+            </h2>
+            <p class="text-sm sm:text-base text-slate-500">Bấm trực tiếp vào cánh cửa để bình chọn cùng cả lớp:</p>
+          </div>
+
+          <!-- 2 NÚT BẤM BÌNH CHỌN -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Cửa A -->
+            <div onclick="voteDoor('A')" class="cursor-pointer p-6 sm:p-8 rounded-2xl bg-white border-2 border-slate-300 hover:border-slate-800 transition shadow-sm hover:shadow-md flex flex-col justify-between select-none group">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-slate-800 group-hover:text-white transition text-slate-800 font-bold flex items-center justify-center font-heading text-lg">A</span>
+                  <span class="text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full"><span id="votes-a">0</span> phiếu (<span id="pct-a">0%</span>)</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[#111827] mb-2 font-heading">
+                  Cánh cửa An Toàn Tuyệt Đối
+                </h3>
+                <p class="text-base sm:text-[19px] text-slate-600 leading-relaxed font-normal">
+                  Lựa chọn đi theo lối mòn có sẵn, tuân thủ mọi định hướng an toàn để không bao giờ phải đối mặt với rủi ro và thất bại.
+                </p>
+              </div>
+              <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+                <div class="w-2/3 bg-slate-100 h-3 rounded-full overflow-hidden">
+                  <div id="bar-a" class="bg-slate-700 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <span class="text-xs sm:text-sm font-bold text-slate-500 group-hover:text-slate-900">+1 Bình chọn</span>
+              </div>
+            </div>
+
+            <!-- Cửa B -->
+            <div onclick="voteDoor('B')" class="cursor-pointer p-6 sm:p-8 rounded-2xl bg-red-50/70 border-2 border-red-500 hover:border-red-600 transition shadow-sm hover:shadow-md flex flex-col justify-between select-none group">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="w-9 h-9 rounded-xl bg-red-600 text-white font-bold flex items-center justify-center font-heading text-lg">B</span>
+                  <span class="text-xs font-bold text-red-700 bg-red-100 px-3 py-1 rounded-full"><span id="votes-b">0</span> phiếu (<span id="pct-b">0%</span>)</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-red-600 mb-2 font-heading">
+                  Cánh cửa Dám Thử Thách
+                </h3>
+                <p class="text-base sm:text-[19px] text-slate-700 leading-relaxed font-medium">
+                  Chủ động dấn thân vào con đường riêng, chấp nhận vấp ngã và rủi ro để tự định nghĩa giá trị đích thực của bản thân.
+                </p>
+              </div>
+              <div class="mt-5 pt-3.5 border-t border-red-100 flex items-center justify-between">
+                <div class="w-2/3 bg-red-100 h-3 rounded-full overflow-hidden">
+                  <div id="bar-b" class="bg-red-600 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <span class="text-xs sm:text-sm font-bold text-red-600 group-hover:text-red-700">+1 Bình chọn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Đoạn văn nghị luận đặt vấn đề -->
+          <div class="bg-slate-100/90 p-4 sm:p-5 rounded-2xl border-l-4 border-slate-800 text-slate-700 text-base sm:text-[19px] leading-relaxed">
+            <strong class="text-slate-900">Mâu thuẫn thực tế:</strong> Bước vào tuổi 18, người trẻ luôn đứng trước sự giằng xé gay gắt giữa một bên là kỳ vọng an toàn tuyệt đối từ gia đình, xã hội và một bên là khát khao mãnh liệt được tự mình khám phá, trải nghiệm dù phải trả giá bằng những vấp ngã đầu đời.
+          </div>
+        </div>
+
+        <div class="text-center text-xs sm:text-sm text-slate-400 pt-2 border-t border-slate-200 shrink-0">
+          Tổng số phiếu hiện tại: <span id="total-votes" class="font-bold text-slate-700">0</span> • Nhấp vào thẻ để cập nhật kết quả cả lớp
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 3: GIẢI THÍCH ================= -->
+      <div id="slide-3" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">HỆ THỐNG LẬP LUẬN • PHẦN 1: GIẢI THÍCH</span>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">Xác lập phạm vi nghị luận</span>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-5 w-full py-2">
+          <div>
+            <h2 class="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#111827] font-heading">
+              1. Giải thích: Thế nào là "Quyền được thử và sai lầm"?
+            </h2>
+            <p class="text-sm sm:text-base text-slate-500 mt-1">Định nghĩa bản chất để thiết lập góc nhìn khách quan</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-1">
+            <!-- Thẻ 1: Quyền được thử -->
+            <div class="bg-white p-7 sm:p-8 rounded-2xl border-t-4 border-slate-800 shadow-sm flex flex-col justify-between space-y-4 relative overflow-hidden group">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-1 rounded bg-slate-100 text-slate-800 text-xs font-bold uppercase tracking-wider font-heading">Khái niệm 01</span>
+                  <div class="w-11 h-11 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center group-hover:bg-slate-800 group-hover:text-white transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.5 6.5l-2 5.5-5.5 2 2-5.5 5.5-2z"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#111827] font-heading">
+                  "Quyền được thử" là gì?
+                </h3>
+                <p class="text-base sm:text-[19px] text-slate-700 leading-relaxed font-normal">
+                  "Quyền được thử" là quyền tự do dấn thân, chủ động bước ra khỏi ranh giới an toàn để hiện thực hóa ước mơ và kiểm chứng năng lực. Đây là tiền đề cốt lõi giúp thanh xuân thoát khỏi sự thụ động, mở ra cánh cửa sáng tạo và khám phá những chân trời tri thức mới.
+                </p>
+              </div>
+              <div class="pt-3 text-xs sm:text-sm text-slate-400 border-t border-slate-100 flex items-center gap-1.5 font-medium">
+                <span>🧭</span> Tinh thần chủ động & khao khát khám phá
+              </div>
+            </div>
+
+            <!-- Thẻ 2: Bản chất sai lầm -->
+            <div class="bg-white p-7 sm:p-8 rounded-2xl border-t-4 border-red-600 shadow-sm flex flex-col justify-between space-y-4 relative overflow-hidden group">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-1 rounded bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider font-heading">Khái niệm 02</span>
+                  <div class="w-11 h-11 rounded-xl bg-red-100 text-red-600 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-bold text-[#111827] font-heading">
+                  Bản chất của "Sai lầm"
+                </h3>
+                <p class="text-base sm:text-[19px] text-slate-700 leading-relaxed font-normal">
+                  "Sai lầm" không phải là một vết nhơ đạo đức hay dấu chấm hết cho năng lực cá nhân. Đó là một hiện tượng tất yếu mang tính quy luật trong quá trình con người tìm kiếm chân lý, tích lũy vốn sống và từng bước hoàn thiện nhân cách cũng như kỹ năng sống của mình.
+                </p>
+              </div>
+              <div class="pt-3 text-xs sm:text-sm text-slate-400 border-t border-slate-100 flex items-center gap-1.5 font-medium">
+                <span>⚙️</span> Quy luật tất yếu để nâng cấp năng lực
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-left text-xs sm:text-sm text-slate-500 pt-2 border-t border-slate-200 shrink-0">
+          <strong>Thông điệp then chốt:</strong> Không một ai sinh ra đã hoàn hảo; quyền được thử nghiệm chính là quyền năng cơ bản nhất để con người tiến hóa.
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 4: LUẬN ĐIỂM 1 ================= -->
+      <div id="slide-4" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">HỆ THỐNG LẬP LUẬN • PHẦN 2: LUẬN ĐIỂM 1</span>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">Bản chất của tuổi trẻ</span>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-5 w-full py-2">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-red-600 font-heading">LUẬN ĐIỂM CỐT LÕI</span>
+            <h2 class="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#111827] mt-1 font-heading">
+              2. Sai lầm là chi phí tất yếu của sự trưởng thành
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <!-- Cột trái 4 phần -->
+            <div class="lg:col-span-4 bg-gradient-to-br from-[#111827] to-slate-900 text-white p-7 rounded-2xl shadow-md flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <span class="px-3 py-1 rounded bg-red-600/30 text-red-400 border border-red-500/40 text-xs font-bold uppercase tracking-wider font-heading">Đối chiếu tuổi tác</span>
+                <div class="pt-3 flex items-baseline gap-3">
+                  <span class="text-6xl lg:text-7xl font-extrabold text-white font-heading">18</span>
+                  <span class="text-2xl text-red-500 font-bold">vs</span>
+                  <span class="text-6xl lg:text-7xl font-extrabold text-slate-500 font-heading">40</span>
+                </div>
+              </div>
+              <blockquote class="text-base sm:text-lg text-slate-200 font-medium border-l-2 border-red-500 pl-3 leading-snug">
+                "Chi phí thất bại ở tuổi 18 luôn rẻ hơn rất nhiều sự hối tiếc ở tuổi 40."
+              </blockquote>
+              <div class="pt-2 text-xs sm:text-sm text-slate-400 border-t border-slate-800">
+                Thanh xuân có năng quyền tự hồi phục cao nhất trong đời người.
+              </div>
+            </div>
+
+            <!-- Cột phải 8 phần -->
+            <div class="lg:col-span-8 bg-white p-7 sm:p-9 rounded-2xl border-l-4 border-red-600 shadow-sm flex flex-col justify-center space-y-4">
+              <p class="text-base sm:text-[19px] lg:text-[20px] text-slate-800 leading-relaxed font-normal">
+                Đặc ân lớn nhất của thanh xuân không phải là sự hoàn hảo, mà là quỹ thời gian dồi dào cùng khả năng tự hồi phục kiên cường sau mỗi lần vấp ngã. Trưởng thành không phải là một đích đến được trải thảm đỏ, mà là một hành trình tôi luyện đầy đau đớn qua những bài học thực tế.
+              </p>
+              <p class="text-base sm:text-[19px] lg:text-[20px] text-slate-800 leading-relaxed font-normal">
+                Nếu chỉ vì nỗi sợ sai lầm mà chọn cách đứng yên, người trẻ sẽ tự giam cầm tâm hồn mình trong chiếc lồng an toàn chật hẹp. Khi từ chối dấn thân, chúng ta không chỉ tước đoạt cơ hội khám phá tiềm năng vô hạn của bản thân, mà còn tự biến cuộc đời mình thành một bản sao mờ nhạt, lập trình sẵn theo ý muốn của người khác.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-500 pt-2 border-t border-slate-200 shrink-0">
+          <span>Đừng sợ trầy xước khi tập đi; hãy sợ cả đời chỉ biết bò.</span>
+          <span class="font-bold text-slate-700">LUẬN ĐIỂM 1</span>
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 5: LUẬN ĐIỂM 2 ================= -->
+      <div id="slide-5" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">HỆ THỐNG LẬP LUẬN • PHẦN 3: LUẬN ĐIỂM 2</span>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">Giá trị của trải nghiệm</span>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-5 w-full py-2">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-red-600 font-heading">LUẬN ĐIỂM CỐT LÕI</span>
+            <h2 class="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#111827] mt-1 font-heading">
+              3. Mỗi lần vấp ngã là một dữ liệu đắt giá
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <!-- Cột trái 8 phần -->
+            <div class="lg:col-span-8 bg-white p-7 sm:p-9 rounded-2xl border-l-4 border-slate-800 shadow-sm flex flex-col justify-center space-y-4">
+              <p class="text-base sm:text-[19px] lg:text-[20px] text-slate-800 leading-relaxed font-normal">
+                Những bài học sâu sắc nhất định hình bản lĩnh và tầm vóc của một con người không bao giờ đến từ những trang lý thuyết suông trong phòng học, mà được chắt lọc từ chính những trải nghiệm xương máu ngoài đời thực. Thành công cho ta sự tự tin nhất thời, nhưng thất bại mới chính là người thầy nghiêm khắc dạy ta sự khiêm nhường và thấu thị.
+              </p>
+              <p class="text-base sm:text-[19px] lg:text-[20px] text-slate-800 leading-relaxed font-normal">
+                Mỗi lần vấp ngã giống như một tấm gương phản chiếu trung thực điểm mù trong tư duy và hạn chế trong kỹ năng. Chính quá trình dám nhìn thẳng vào vết rạn nứt đó giúp người trẻ rèn luyện tâm lý thép trước nghịch cảnh, biết cách phân tích nguyên nhân và tái cấu trúc hướng đi một cách khôn ngoan, vững chắc hơn.
+              </p>
+            </div>
+
+            <!-- Cột phải 4 phần: Sơ đồ 3 bước -->
+            <div class="lg:col-span-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-red-600 font-heading">CHU TRÌNH TIẾN HÓA</span>
+              
+              <div class="space-y-3 relative">
+                <div class="p-3.5 rounded-xl bg-red-50 border border-red-200 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">1</span>
+                  <div>
+                    <h5 class="font-bold text-red-700 text-base">Vấp ngã thực tế</h5>
+                    <p class="text-xs text-slate-500">Đối diện va đập cuộc sống</p>
+                  </div>
+                </div>
+
+                <div class="text-center text-red-500 text-sm font-bold leading-none">↓</div>
+
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-sm shrink-0">2</span>
+                  <div>
+                    <h5 class="font-bold text-slate-800 text-base">Phân tích điểm mù</h5>
+                    <p class="text-xs text-slate-500">Mổ xẻ nguyên nhân tư duy</p>
+                  </div>
+                </div>
+
+                <div class="text-center text-slate-600 text-sm font-bold leading-none">↓</div>
+
+                <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shrink-0">3</span>
+                  <div>
+                    <h5 class="font-bold text-emerald-800 text-base">Nâng cấp bản lĩnh</h5>
+                    <p class="text-xs text-slate-500">Tái lập hướng đi vững vàng</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-xs text-center text-slate-400 pt-1 border-t border-slate-100">
+                Thất bại là dữ liệu, không phải số phận.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-500 pt-2 border-t border-slate-200 shrink-0">
+          <span>Người không bao giờ vấp ngã là người chưa bao giờ thực sự nỗ lực tiến về phía trước.</span>
+          <span class="font-bold text-slate-700">LUẬN ĐIỂM 2</span>
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 6: DẪN CHỨNG ELON MUSK (ẢNH TO H-48/H-56 + FALLBACK THÔNG MINH) ================= -->
+      <div id="slide-6" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">CHỨNG CỨ THỰC TIỄN • DẪN CHỨNG TIÊU BIỂU</span>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">Bằng chứng xác thực nhân vật thời đại</span>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-4 w-full py-1">
+          <div>
+            <h2 class="text-2xl sm:text-3xl lg:text-[38px] font-extrabold text-[#111827] font-heading">
+              4. Dẫn chứng thực tế: Elon Musk và bài học từ 3 lần tên lửa nổ tung
+            </h2>
+            <p class="text-xs sm:text-base text-slate-500 mt-0.5">Từ bờ vực phá sản năm 2008 đến kỳ tích khai phá kỷ nguyên vũ trụ tư nhân của SpaceX</p>
+          </div>
+
+          <!-- Bố cục 2 cột cân đối: Trái là 2 Ảnh to h-48/h-56 + Phải là Timeline & Bình luận -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+            
+            <!-- Cột trái: 2 ảnh to cao h-48 lg:h-56 -->
+            <div class="lg:col-span-6 flex flex-col justify-between gap-4">
+              <!-- Ảnh 1: Thất bại Falcon 1 -->
+              <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                <div class="relative h-44 sm:h-48 lg:h-52 w-full bg-slate-900 overflow-hidden">
+                  <img src="thatbai.jpg" 
+                       alt="Falcon 1 phóng thử nghiệm" 
+                       class="w-full h-full object-cover object-center"
+                       onerror="if(this.src!=='https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2025/6/18/photo1750232878087-17502328781671247200029.jpg'){this.src='https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2025/6/18/photo1750232878087-17502328781671247200029.jpg';}else{this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full w-full flex items-center justify-center bg-slate-900 text-red-400 text-sm font-mono p-4 text-center\'>💥 [Falcon 1 Nổ tung năm 2006]</div>';}">
+                  <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-red-600/90 text-white text-xs font-bold uppercase tracking-wider font-heading shadow">
+                    THẤT BẠI (2006–2008)
+                  </span>
+                </div>
+                <div class="p-3 bg-white border-t border-slate-100">
+                  <p class="text-xs sm:text-sm text-slate-600 italic leading-snug">
+                    "Tên lửa Falcon 1 gặp sự cố cháy và rơi chỉ sau 33 giây rời bệ phóng."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Ảnh 2: Thành công hạ cánh Falcon Heavy -->
+              <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                <div class="relative h-44 sm:h-48 lg:h-52 w-full bg-slate-900 overflow-hidden">
+                  <img src="https://e.khoahoc.tv/photos/image/2018/10/09/ten-lua-falcon-9.jpg"
+alt="Hai tên lửa SpaceX hạ cánh song song"
+class="w-full h-full object-cover object-center"
+onerror="this.onerror=null; this.src='thanhcong.jpg';">
+                  <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-emerald-600/90 text-white text-xs font-bold uppercase tracking-wider font-heading shadow">
+                    THÀNH CÔNG LỊCH SỬ
+                  </span>
+                </div>
+                <div class="p-3 bg-white border-t border-slate-100">
+                  <p class="text-xs sm:text-sm text-slate-600 italic leading-snug">
+                    "Hai tên lửa đẩy của SpaceX hạ cánh đồng thời thẳng đứng — kỳ tích từ 3 lần thất bại."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột phải: Timeline & Đoạn văn bình luận -->
+            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl border-l-4 border-red-600 shadow-sm flex flex-col justify-between space-y-4">
+              <!-- Timeline 4 mốc -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                <div class="p-2 rounded-lg bg-slate-50 border border-slate-200">
+                  <strong class="text-red-600 block font-mono text-sm">2006</strong> Nổ lần 1
+                </div>
+                <div class="p-2 rounded-lg bg-slate-50 border border-slate-200">
+                  <strong class="text-red-600 block font-mono text-sm">2007</strong> Trượt quỹ đạo
+                </div>
+                <div class="p-2 rounded-lg bg-red-50 border border-red-200">
+                  <strong class="text-red-600 block font-mono text-sm">2008</strong> Cạn sạch vốn
+                </div>
+                <div class="p-2 rounded-lg bg-slate-900 text-white">
+                  <strong class="text-emerald-400 block font-mono text-sm">LẦN 4</strong> Cứu SpaceX
+                </div>
+              </div>
+
+              <!-- 2 Đoạn văn bình luận dẫn chứng cỡ chữ 18px -->
+              <div class="space-y-3 pt-1">
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 font-heading">Ý nghĩa đắt giá từ dẫn chứng:</h4>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Nếu Elon Musk chấp nhận quy hàng trước định kiến và coi 3 vụ nổ tên lửa liên tiếp là thảm họa chấm hết sự nghiệp, nhân loại ngày nay đã không có tên lửa tái sử dụng hay mạng lưới Starlink toàn cầu.
+                </p>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Thất bại của 3 lần đầu không phải là sự bất tài, mà là quá trình thu thập dữ liệu kỹ thuật sống còn. Chính thái độ dũng cảm đối diện với sai sót và kiên định mổ xẻ nguyên nhân đã biến đống tro tàn thất bại thành bệ phóng cho kỳ tích vĩ đại nhất lịch sử hàng không vũ trụ tư nhân.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="text-left text-xs sm:text-sm text-slate-500 pt-1.5 border-t border-slate-200 shrink-0">
+          Sai lầm chỉ là một phần tất yếu của quá trình sáng tạo; điều quyết định là ta học được gì từ đống đổ nát.
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 7: PHẢN ĐỀ (TƯƠNG TÁC 2 BƯỚC: 2 TÌNH HUỐNG -> NÚT MỞ PHÁN QUYẾT) ================= -->
+      <div id="slide-7" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">GÓC PHẢN BIỆN • PHẢN ĐỀ TRỌNG TÂM</span>
+          
+          <div class="flex items-center gap-2">
+            <button id="timer-btn" onclick="toggleTimer()" class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-sm">
+              <span>⏱️</span> <span id="timer-label">Bấm giờ thảo luận (30s)</span>
+            </button>
+            <button id="timer-reset" onclick="resetTimer()" class="px-2.5 py-1 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold transition" title="Đặt lại 30s">↺</button>
+          </div>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-4 w-full py-1">
+          <div>
+            <h2 class="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#111827] font-heading">
+              5. Phản đề & Tương tác: Đâu là ranh giới giữa Dũng cảm và Cẩu thả?
+            </h2>
+            <div class="flex items-center gap-3 mt-1">
+              <p class="text-base sm:text-lg text-red-600 font-semibold">
+                Câu hỏi thảo luận: "Khi nào quyền được sai biến thành sự ngụy biện?"
+              </p>
+              <span id="countdown-badge" class="hidden px-2.5 py-0.5 rounded-full font-mono font-bold text-xs transition-all"></span>
+            </div>
+          </div>
+
+          <!-- BƯỚC 1: 2 THẺ TÌNH HUỐNG THỰC TẾ TUỔI 18 -->
+          <div id="scenarios-container" class="grid grid-cols-1 sm:grid-cols-2 gap-5 transition-all">
+            <!-- Tình huống A -->
+            <div class="bg-white p-6 sm:p-7 rounded-2xl border-2 border-emerald-300 shadow-sm space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-md bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider font-heading">TÌNH HUỐNG THỰC TẾ A</span>
+                <span class="text-2xl">🌱</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 font-heading">Khởi nghiệp sa sút điểm số</h3>
+              <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                "Dành 6 tháng tự làm dự án khởi nghiệp riêng khiến điểm thi thử sa sút, nhưng nghiêm túc rút ra bài học kinh nghiệm và lập kế hoạch ôn tập bù đắp."
+              </p>
+              <div class="pt-2 text-xs font-semibold text-emerald-700">
+                ❓ Bạn phán quyết: Đây là Dũng cảm hay Cẩu thả?
+              </div>
+            </div>
+
+            <!-- Tình huống B -->
+            <div class="bg-white p-6 sm:p-7 rounded-2xl border-2 border-red-300 shadow-sm space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-md bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider font-heading">TÌNH HUỐNG THỰC TẾ B</span>
+                <span class="text-2xl">🎮</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 font-heading">Chơi game tặc lưỡi bỏ bê</h3>
+              <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                "Thức đêm chơi game, bỏ bê học tập dẫn đến điểm kém, sau đó tặc lưỡi: Tuổi trẻ ai mà chẳng có quyền sai!"
+              </p>
+              <div class="pt-2 text-xs font-semibold text-red-600">
+                ❓ Bạn phán quyết: Đây là Dũng cảm hay Cẩu thả?
+              </div>
+            </div>
+          </div>
+
+          <!-- NÚT MỞ PHÁN QUYẾT Ở GIỮA -->
+          <div class="text-center py-1">
+            <button id="verdict-toggle-btn" onclick="toggleVerdict()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border-2 border-red-500 text-white font-bold text-sm sm:text-base transition shadow-lg inline-flex items-center gap-2 group">
+              <span>⚖️</span>
+              <span id="verdict-btn-text">Mở Phán Quyết & Luận Điểm Phản Đề</span>
+              <span class="group-hover:translate-x-1 transition">➔</span>
+            </button>
+          </div>
+
+          <!-- BƯỚC 2: 2 CỘT PHÂN TÍCH LUẬN ĐIỂM PHẢN ĐỀ (Mặc định ẩn, bấm nút hiện ra mượt mà) -->
+          <div id="verdict-columns" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-5 transition-all">
+            <!-- Cột Sai ngụy biện -->
+            <div class="bg-white p-6 sm:p-7 rounded-2xl border-t-4 border-red-600 shadow-sm space-y-3 flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider font-heading">Phán quyết Tình huống B</span>
+                  <span class="text-2xl">⚠️</span>
+                </div>
+                <h3 class="text-xl font-bold text-red-700 font-heading">
+                  Sai ngụy biện & Vô trách nhiệm
+                </h3>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Cần nghiêm khắc phê phán một bộ phận giới trẻ hiện nay đang lạm dụng câu khẩu hiệu "tuổi trẻ có quyền sai" như một tấm bình phong để bao biện cho lối sống buông thả, lười biếng và thiếu chuẩn bị. Khi làm sai nhưng không hối lỗi, liên tục lặp lại cùng một sai lầm và trút bỏ hậu quả lên vai gia đình, đó không phải là dũng cảm thử nghiệm mà là sự cẩu thả ích kỷ và vô trách nhiệm.
+                </p>
+              </div>
+              <div class="pt-2 text-xs text-red-600 border-t border-red-100 flex items-center gap-1 font-semibold">
+                <span>✕</span> Buông thả • Trốn tránh • Tái phạm sai lầm
+              </div>
+            </div>
+
+            <!-- Cột Sai để lớn -->
+            <div class="bg-white p-6 sm:p-7 rounded-2xl border-t-4 border-emerald-600 shadow-sm space-y-3 flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider font-heading">Phán quyết Tình huống A</span>
+                  <span class="text-2xl">🛡️</span>
+                </div>
+                <h3 class="text-xl font-bold text-emerald-800 font-heading">
+                  Sai để lớn & Bản lĩnh thực sự
+                </h3>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Ranh giới giữa bản lĩnh dấn thân và sự liều lĩnh mù quáng nằm ở thái độ: Người dũng cảm luôn chuẩn bị kỹ lưỡng trước khi hành động và biết cúi đầu nhận lỗi để sửa đổi sau thất bại; kẻ ngụy biện chỉ tìm kiếm sự tha thứ dễ dãi mà không chịu thay đổi. Quyền được sai chỉ có giá trị khi nó gắn liền với ý thức tự chịu trách nhiệm và nỗ lực hoàn thiện không ngừng.
+                </p>
+              </div>
+              <div class="pt-2 text-xs text-emerald-700 border-t border-emerald-100 flex items-center gap-1 font-semibold">
+                <span>✓</span> Chuẩn bị • Cúi đầu sửa sai • Tự chịu trách nhiệm
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-left text-xs sm:text-sm text-slate-500 pt-2 border-t border-slate-200 shrink-0">
+          Không bao giờ được nhầm lẫn giữa sự dấn thân khai phá với sự buông thả nông nổi.
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 8: BÀI HỌC HÀNH ĐỘNG ================= -->
+      <div id="slide-8" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-9 lg:p-12 bg-[#F9FAFB] text-[#1F2937] overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2.5 shrink-0">
+          <span class="text-xs sm:text-sm uppercase font-bold text-red-600 tracking-wider font-heading">BÀI HỌC NGHỊ LUẬN • NHẬN THỨC & HÀNH ĐỘNG</span>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">Giải pháp cho người trẻ</span>
+        </div>
+
+        <div class="my-auto max-w-6xl mx-auto space-y-5 w-full py-2">
+          <div>
+            <h2 class="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-[#111827] font-heading">
+              6. Bài học nhận thức & Hành động cho người trẻ
+            </h2>
+            <p class="text-sm sm:text-base text-slate-500 mt-1">3 nguyên tắc vàng để "Thử và sai một cách thông minh" (Smart Failure)</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-1">
+            <!-- Thẻ 1: Số chìm 01 -->
+            <div class="bg-white p-7 rounded-2xl border-t-4 border-slate-800 shadow-sm relative overflow-hidden flex flex-col justify-between space-y-4">
+              <span class="absolute -right-2 -bottom-4 text-8xl font-black text-slate-100 select-none pointer-events-none font-heading">01</span>
+              
+              <div class="space-y-3 relative z-10">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-slate-500">NGUYÊN TẮC 01</span>
+                  <span class="text-2xl">📚</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[#111827] font-heading">
+                  Chuẩn bị kỹ lưỡng
+                </h3>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Dám bước ra khỏi vùng an toàn nhưng không được mù quáng. Phải trang bị đầy đủ tri thức nền tảng, kỹ năng và dự trù rủi ro trước khi thử nghiệm cái mới.
+                </p>
+              </div>
+              <div class="pt-2.5 text-xs sm:text-sm font-semibold text-slate-400 border-t border-slate-100 relative z-10">
+                Tri thức là lá chắn rủi ro
+              </div>
+            </div>
+
+            <!-- Thẻ 2: Số chìm 02 -->
+            <div class="bg-white p-7 rounded-2xl border-t-4 border-red-600 shadow-sm relative overflow-hidden flex flex-col justify-between space-y-4">
+              <span class="absolute -right-2 -bottom-4 text-8xl font-black text-red-50 select-none pointer-events-none font-heading">02</span>
+              
+              <div class="space-y-3 relative z-10">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-red-600">NGUYÊN TẮC 02</span>
+                  <span class="text-2xl">⚖️</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[#111827] font-heading">
+                  Tự chịu trách nhiệm 100%
+                </h3>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Dũng cảm đối diện với mọi kết quả, tự mình đứng dậy dọn dẹp hậu quả và chịu trách nhiệm với hành vi của mình mà không đổ lỗi cho hoàn cảnh hay người khác.
+                </p>
+              </div>
+              <div class="pt-2.5 text-xs sm:text-sm font-semibold text-red-600 border-t border-red-100 relative z-10">
+                Bản lĩnh tự gánh vác
+              </div>
+            </div>
+
+            <!-- Thẻ 3: Số chìm 03 -->
+            <div class="bg-white p-7 rounded-2xl border-t-4 border-slate-800 shadow-sm relative overflow-hidden flex flex-col justify-between space-y-4">
+              <span class="absolute -right-2 -bottom-4 text-8xl font-black text-slate-100 select-none pointer-events-none font-heading">03</span>
+              
+              <div class="space-y-3 relative z-10">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-slate-500">NGUYÊN TẮC 03</span>
+                  <span class="text-2xl">🔍</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[#111827] font-heading">
+                  Đúc rút bài học sâu sắc
+                </h3>
+                <p class="text-base sm:text-[18px] text-slate-700 leading-relaxed font-normal">
+                  Mổ xẻ nguyên nhân sau mỗi lần vấp ngã để nâng cấp năng lực bản thân; kiên quyết không cho phép mình phạm phải cùng một sai lầm lần thứ hai.
+                </p>
+              </div>
+              <div class="pt-2.5 text-xs sm:text-sm font-semibold text-slate-400 border-t border-slate-100 relative z-10">
+                Không vấp lại hòn đá cũ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-left text-xs sm:text-sm text-slate-500 pt-2 border-t border-slate-200 shrink-0">
+          Chỉ khi dám trả giá một cách sòng phẳng, người trẻ mới thực sự làm chủ cuộc đời mình.
+        </div>
+      </div>
+
+      <!-- ================= SLIDE 9: KẾT THÚC ================= -->
+      <div id="slide-9" class="slide-item hidden absolute inset-0 flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-[#111827] bg-grid-pattern text-white overflow-y-auto custom-scroll">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3 sm:pb-4 shrink-0">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+            <span class="text-xs sm:text-sm tracking-widest uppercase font-heading text-red-500 font-bold">KẾT LUẬN & THÔNG ĐIỆP</span>
+          </div>
+          <span class="text-xs sm:text-sm text-slate-400 font-medium">BÀN GIAO THÔNG ĐIỆP</span>
+        </div>
+
+        <div class="my-auto max-w-5xl mx-auto text-center space-y-5 py-2">
+          <span class="text-5xl text-red-500 font-serif leading-none block">“</span>
+          
+          <blockquote class="text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-snug font-heading">
+            Ở đây, thất bại luôn là một lựa chọn tất yếu.<br>
+            Nếu mọi thứ chưa từng thất bại,<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">
+              nghĩa là bạn chưa đủ sáng tạo.
+            </span>
+          </blockquote>
+
+          <p class="text-xs sm:text-base text-slate-400 font-mono tracking-wider">
+            — ELON MUSK —
+          </p>
+
+          <div class="max-w-3xl mx-auto pt-2">
+            <p class="text-base sm:text-xl text-slate-300 leading-relaxed font-normal">
+              Thanh xuân chỉ đến một lần trong đời. Hãy trân trọng quyền được thử và sai lầm như một món quà vô giá của tuổi trẻ, nhưng hãy luôn sai một cách có trí tuệ, bản lĩnh và trách nhiệm để kiên cường kiến tạo nên tương lai rực rỡ của chính bạn!
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 sm:pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-400 shrink-0">
+          <span>Dám ước mơ • Dám dấn thân • Dám chịu trách nhiệm</span>
+          <span class="text-red-400 font-semibold uppercase">Cảm ơn thầy cô và các bạn đã lắng nghe!</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- COLLAPSIBLE SPEAKER NOTES DRAWER -->
+  <div id="notes-panel" class="w-full bg-[#0D121F] border-t border-slate-800 px-4 sm:px-6 py-3 hidden shrink-0">
+    <div class="max-w-full mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <div class="flex-1">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs font-bold uppercase text-red-500 tracking-wider font-heading">GỢI Ý LỜI THUYẾT MINH CÁ NHÂN (SPEAKER SCRIPT)</span>
+          <span class="text-xs text-slate-400">— Slide <span id="note-index">1</span></span>
+        </div>
+        <p id="note-text" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal"></p>
+      </div>
+      <button onclick="copyCurrentNote()" class="shrink-0 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition">
+        📋 Sao chép lời thoại
+      </button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT SLIDE ENGINE -->
+  <script>
+    const totalSlides = 9;
+    let currentSlide = 1;
+
+    // Khảo sát bình chọn Slide 2
+    let votes = { A: 0, B: 0 };
+
+    function voteDoor(door) {
+      votes[door]++;
+      updateVoteUI();
+    }
+
+    function resetVote(e) {
+      if (e) e.stopPropagation();
+      votes = { A: 0, B: 0 };
+      updateVoteUI();
+    }
+
+    function updateVoteUI() {
+      const total = votes.A + votes.B;
+      const pctA = total > 0 ? Math.round((votes.A / total) * 100) : 0;
+      const pctB = total > 0 ? (100 - pctA) : 0;
+
+      document.getElementById('votes-a').textContent = votes.A;
+      document.getElementById('votes-b').textContent = votes.B;
+      document.getElementById('pct-a').textContent = pctA + '%';
+      document.getElementById('pct-b').textContent = pctB + '%';
+      document.getElementById('bar-a').style.width = pctA + '%';
+      document.getElementById('bar-b').style.width = pctB + '%';
+      document.getElementById('total-votes').textContent = total;
+    }
+
+    // Tương tác 2 bước Slide 7: Ẩn/Hiện Phán Quyết
+    let verdictRevealed = false;
+
+    function toggleVerdict() {
+      verdictRevealed = !verdictRevealed;
+      const scenarios = document.getElementById('scenarios-container');
+      const verdict = document.getElementById('verdict-columns');
+      const btnText = document.getElementById('verdict-btn-text');
+
+      if (verdictRevealed) {
+        scenarios.classList.add('hidden');
+        verdict.classList.remove('hidden');
+        verdict.classList.add('slide-enter');
+        btnText.textContent = "Quay Lại 2 Tình Huống Ban Đầu";
+      } else {
+        scenarios.classList.remove('hidden');
+        scenarios.classList.add('slide-enter');
+        verdict.classList.add('hidden');
+        btnText.textContent = "Mở Phán Quyết & Luận Điểm Phản Đề";
+      }
+    }
+
+    // Bộ đếm giờ 30 giây Slide 7
+    let timerInterval = null;
+    let timeLeft = 30;
+
+    function toggleTimer() {
+      const btn = document.getElementById('timer-btn');
+      const label = document.getElementById('timer-label');
+      const badge = document.getElementById('countdown-badge');
+
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        label.textContent = `Tiếp tục (${timeLeft}s)`;
+        badge.classList.remove('animate-pulse');
+      } else {
+        badge.classList.remove('hidden');
+        badge.className = "px-2.5 py-0.5 rounded-full font-mono font-bold text-xs bg-amber-100 text-amber-800 animate-pulse";
+        badge.innerHTML = `Đang đếm: <span>${timeLeft}</span>s`;
+        
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          label.textContent = `Đang đếm (${timeLeft}s)`;
+          badge.innerHTML = `Đang đếm: <span>${timeLeft}</span>s`;
+
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            label.textContent = "HẾT GIỜ (30s)!";
+            btn.classList.remove('bg-red-600', 'hover:bg-red-700');
+            btn.classList.add('bg-rose-900', 'border', 'border-rose-500', 'animate-pulse');
+            badge.className = "px-3 py-0.5 rounded-full font-mono font-bold text-xs bg-red-600 text-white animate-bounce shadow-md";
+            badge.textContent = "⏰ HẾT GIỜ THẢO LUẬN!";
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timeLeft = 30;
+      const btn = document.getElementById('timer-btn');
+      btn.className = "px-3 py-1 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-sm";
+      document.getElementById('timer-label').textContent = "Bấm giờ thảo luận (30s)";
+      const badge = document.getElementById('countdown-badge');
+      badge.classList.add('hidden');
+      badge.className = "hidden px-2.5 py-0.5 rounded-full font-mono font-bold text-xs";
+    }
+
+    // Lời thoại diễn giả (Speaker Notes)
+    const speakerNotes = {
+      1: "Kính thưa thầy cô giáo và các bạn học sinh! Đứng trước ngưỡng cửa 18 tuổi, em cũng như bao bạn bè đồng trang lứa đang mang trong mình những hoài bão lớn lao nhưng cũng đầy ắp nỗi sợ hãi trước những ngã rẽ cuộc đời. Hôm nay, em xin được gửi tới thầy cô và các bạn bài thuyết trình nghị luận xã hội: 'Quyền được thử và sai lầm của giới trẻ'. Bài nói của em gồm 3 trụ cột chính: Lập luận phản biện, Dẫn chứng thực tế và Phần tương tác trực tiếp với cả lớp.",
+      2: "Để mở đầu, em muốn mời cả lớp cùng tham gia một khảo sát nhanh: Nếu ngày mai phải tự quyết định tương lai của mình, bạn sẽ chọn bước qua Cánh cửa A – một lộ trình an toàn được định sẵn để không bao giờ vấp ngã; hay Cánh cửa B – dám thử thách, chấp nhận rủi ro để tự định nghĩa chính mình? Em xin mời các bạn giơ tay hoặc bấm trực tiếp lên màn hình. Đa phần chúng ta đều muốn chọn B, nhưng tại sao trong thực tế, nỗi sợ sai lầm lại luôn giam cầm chúng ta trong sự an toàn tầm thường?",
+      3: "Trước hết, em xin được làm rõ hai khái niệm cốt lõi: 'Quyền được thử' là quyền tự do dấn thân, không bị trói buộc bởi những khuôn mẫu định kiến để khám phá giới hạn tiềm năng của bản thân. Còn 'Sai lầm' không phải là vết nhơ của sự thất bại vĩnh viễn, mà là một hiện tượng tất yếu mang tính quy luật trong quá trình con người tìm kiếm chân lý và hoàn thiện nhân cách.",
+      4: "Đi vào luận điểm thứ nhất: Em khẳng định rằng sai lầm chính là chi phí tất yếu của sự trưởng thành. Hãy nhìn vào con số 18 và 40: Tuổi 18 có một đặc ân vô giá mà tuổi 40 không thể có, đó là quỹ thời gian dài và khả năng tự phục hồi kỳ diệu sau mỗi lần vấp ngã. Chi phí thất bại ở tuổi 18 luôn rẻ hơn rất nhiều so với sự hối tiếc muộn màng ở tuổi 40. Nếu chỉ vì sợ trầy xước mà không bao giờ dám tập đi, chúng ta sẽ mãi mãi phải bò trên mặt đất.",
+      5: "Luận điểm thứ hai: Mỗi lần vấp ngã là một nguồn dữ liệu đắt giá. Như sơ đồ chu trình bên phải màn hình: Khi vấp ngã ngoài thực tế, ta có cơ hội nhìn thẳng vào điểm mù trong tư duy, để từ đó tái cấu trúc và nâng cấp bản lĩnh sống. Trường học dạy ta bài học rồi mới cho làm bài kiểm tra; nhưng trường đời ném cho ta bài kiểm tra trước, rồi sau những bầm dập, ta mới học được bài học đắt giá.",
+      6: "Một minh chứng sống động cho chân lý này chính là tỷ phú Elon Musk. Trên màn hình là hai hình ảnh đối lập lịch sử: Năm 2006, quả tên lửa Falcon 1 đầu tiên phát nổ chỉ sau 33 giây rời bệ phóng; và đến năm 2008, sau 3 lần nổ liên tiếp, công ty đứng bên bờ vực phá sản. Nhưng nếu Musk bỏ cuộc, nhân loại ngày nay đã không thể chứng kiến kỳ tích 2 tên lửa SpaceX hạ cánh thẳng đứng đồng thời như bức ảnh thứ hai. Nổ tên lửa không phải thất bại, mà là quá trình thu thập dữ liệu kỹ thuật sống còn.",
+      7: "Tuy nhiên, đâu là ranh giới giữa Dũng cảm và Cẩu thả? Em xin đưa ra 2 tình huống thực tế của tuổi 18 để cả lớp cùng quan sát: Tình huống A: Tự khởi nghiệp khiến điểm thi sa sút nhưng nghiêm túc rút kinh nghiệm; và Tình huống B: Thức đêm chơi game điểm kém rồi tặc lưỡi 'tuổi trẻ có quyền sai'. Đâu là bản lĩnh, đâu là ngụy biện? (Bấm nút Mở Phán Quyết)... Vâng, khi mở phán quyết, sự thật lộ rõ: Tình huống A là 'Sai để lớn', còn Tình huống B là 'Sai ngụy biện'. Quyền được sai chỉ có giá trị khi đi cùng ý thức tự chịu trách nhiệm!",
+      8: "Từ nhận thức đến hành động, người trẻ chúng ta cần khắc ghi 3 nguyên tắc 'Thử thông minh': Một là Chuẩn bị kỹ lưỡng về tri thức trước khi bước ra ngoài; Hai là Tự chịu trách nhiệm 100% trước những lựa chọn của mình mà không đổ lỗi; và Ba là Đúc rút bài học sâu sắc để không bao giờ vấp ngã lần thứ hai ở cùng một vị trí.",
+      9: "Em xin kết thúc bài thuyết trình bằng câu nói bất hủ của Elon Musk: 'Ở đây, thất bại luôn là một lựa chọn tất yếu. Nếu mọi thứ chưa từng thất bại, nghĩa là bạn chưa đủ sáng tạo.' Thanh xuân chỉ đến một lần trong đời, em và các bạn hãy dũng cảm dấn thân, dám thử và dám chịu trách nhiệm với những lựa chọn của mình để kiến tạo nên một tương lai rực rỡ. Em xin chân thành cảm ơn thầy cô và các bạn đã chú ý lắng nghe!"
+    };
+
+    function showSlide(index) {
+      if (index < 1 || index > totalSlides) return;
+      currentSlide = index;
+
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        if (i === currentSlide) {
+          slide.classList.remove('hidden');
+          slide.classList.add('slide-enter');
+        } else {
+          slide.classList.add('hidden');
+          slide.classList.remove('slide-enter');
+        }
+      }
+
+      document.getElementById('current-index').textContent = currentSlide;
+      document.getElementById('note-index').textContent = currentSlide;
+      document.getElementById('note-text').textContent = speakerNotes[currentSlide];
+
+      document.getElementById('prev-btn').disabled = (currentSlide === 1);
+      document.getElementById('next-btn').disabled = (currentSlide === totalSlides);
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) showSlide(currentSlide - 1);
+    }
+
+    function toggleNotes() {
+      const panel = document.getElementById('notes-panel');
+      panel.classList.toggle('hidden');
+    }
+
+    function copyCurrentNote() {
+      const text = speakerNotes[currentSlide];
+      navigator.clipboard.writeText(text);
+      alert('Đã sao chép kịch bản thuyết trình của Slide ' + currentSlide + '!');
+    }
+
+    // Chỉ dùng phím mũi tên và PageUp/PageDown, không chặn Space
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key.toLowerCase() === 's') {
+        toggleNotes();
+      }
+    });
+
+    // Khởi tạo ban đầu
+    showSlide(1);
+    updateVoteUI();
+  </script>
+</body>
+</html>
